@@ -1,1 +1,70 @@
-hello index
+{% extends '_layouts/main' %}
+
+{% block main %}
+
+    <section class="hero is-medium is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-8-desktop is-offset-2-desktop">
+              <h1 class="title is-2 is-spaced">
+                Services
+              </h1>
+            
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+         {% for entry in craft.entries.section('services').limit(4).all() %}
+
+            {% if loop.index is not divisible by(2) %}
+            
+            <div class="columns">
+                <div class="column">
+                    <figure class="image is-228x228">
+                        <img src="https://bulma.io/images/placeholders/256x256.png">
+                     </figure>
+                </div>
+                <div class="column">
+                    <h3 class="title is-3">{{ entry.title }}</h3>
+                    <p class="is-spaced"> I connect with people quickly and aim to become their trusted advisor and objective sounding board in both personal lives and professional lives. I believe if you’re mind is clouded with personal issues, it’s difficult to show up well at work, so I aim to coach the whole person. No topic is off limits.</p>
+                    <p> I connect with people quickly and aim to become their trusted advisor and objective sounding board in both personal lives and professional lives. I believe if you’re mind is clouded with personal issues, it’s difficult to show up well at work, so I aim to coach the whole person. No topic is off limits.</p>
+                    <a href="{{ entry.url }}" class="button is-primary">Learn More</a>
+                </div>
+            </div>
+
+            {% else %}
+
+            <div class="columns">
+                <div class="column">
+                    <h3 class="title is-3">{{ entry.title }}</h3>
+                    <p class="is-spaced"> I connect with people quickly and aim to become their trusted advisor and objective sounding board in both personal lives and professional lives. I believe if you’re mind is clouded with personal issues, it’s difficult to show up well at work, so I aim to coach the whole person. No topic is off limits.</p>
+                    <p> I connect with people quickly and aim to become their trusted advisor and objective sounding board in both personal lives and professional lives. I believe if you’re mind is clouded with personal issues, it’s difficult to show up well at work, so I aim to coach the whole person. No topic is off limits.</p>
+                    <a href="{{ entry.url }}" class="button is-primary">Learn More</a>
+                </div>
+                <div class="column">
+                    <figure class="image is-228x228">
+                        <img src="https://bulma.io/images/placeholders/256x256.png">
+                     </figure>
+                </div>
+            </div>
+                
+
+            {% endif %}    
+
+
+         {% endfor %}   
+            
+
+       </div> 
+    </section>
+
+  {% endblock %}
+    
