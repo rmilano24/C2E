@@ -54,11 +54,13 @@
               {% for entry in craft.entries.section('services').limit(4).all() %}
               
               <div class="column">
+                  <a href="{{ entry.url }}">
                   <figure class="image is-48x48">
                     <img src="https://bulma.io/images/placeholders/48x48.png">
                   </figure>
                 <h3 class="title is-3">{{ entry.title }}</h3>
                   <p>{{ entry.TeaserText }}</p>
+                  </a>
               </div>
 
                {% endfor %}     
