@@ -51,6 +51,7 @@ class ComposerStaticInitfa6cb7c5977a1d4074e912eaf092653d
             'creocoder\\nestedsets\\' => 21,
             'craftcms\\oauth2\\client\\' => 23,
             'craft\\composer\\' => 15,
+            'craft\\ckeditor\\' => 15,
             'craft\\' => 6,
             'cebe\\markdown\\' => 14,
         ),
@@ -200,6 +201,10 @@ class ComposerStaticInitfa6cb7c5977a1d4074e912eaf092653d
         'craft\\composer\\' => 
         array (
             0 => __DIR__ . '/..' . '/craftcms/plugin-installer/src',
+        ),
+        'craft\\ckeditor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/craftcms/ckeditor/src',
         ),
         'craft\\' => 
         array (
@@ -1921,6 +1926,10 @@ class ComposerStaticInitfa6cb7c5977a1d4074e912eaf092653d
         'craft\\behaviors\\FieldLayoutBehavior' => __DIR__ . '/..' . '/craftcms/cms/src/behaviors/FieldLayoutBehavior.php',
         'craft\\behaviors\\SessionBehavior' => __DIR__ . '/..' . '/craftcms/cms/src/behaviors/SessionBehavior.php',
         'craft\\cache\\AppPathDependency' => __DIR__ . '/..' . '/craftcms/cms/src/cache/AppPathDependency.php',
+        'craft\\ckeditor\\Field' => __DIR__ . '/..' . '/craftcms/ckeditor/src/Field.php',
+        'craft\\ckeditor\\Plugin' => __DIR__ . '/..' . '/craftcms/ckeditor/src/Plugin.php',
+        'craft\\ckeditor\\assets\\ckeditor\\CkeditorAsset' => __DIR__ . '/..' . '/craftcms/ckeditor/src/assets/ckeditor/CkeditorAsset.php',
+        'craft\\ckeditor\\assets\\field\\FieldAsset' => __DIR__ . '/..' . '/craftcms/ckeditor/src/assets/field/FieldAsset.php',
         'craft\\composer\\Factory' => __DIR__ . '/..' . '/craftcms/cms/src/composer/Factory.php',
         'craft\\composer\\Installer' => __DIR__ . '/..' . '/craftcms/plugin-installer/src/Installer.php',
         'craft\\composer\\InvalidPluginException' => __DIR__ . '/..' . '/craftcms/plugin-installer/src/InvalidPluginException.php',

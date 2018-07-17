@@ -27,6 +27,7 @@ return array(
     'creocoder\\nestedsets\\' => array($vendorDir . '/creocoder/yii2-nested-sets/src'),
     'craftcms\\oauth2\\client\\' => array($vendorDir . '/craftcms/oauth2-craftid/src'),
     'craft\\composer\\' => array($vendorDir . '/craftcms/plugin-installer/src'),
+    'craft\\ckeditor\\' => array($vendorDir . '/craftcms/ckeditor/src'),
     'craft\\' => array($vendorDir . '/craftcms/cms/src'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
     'Zend\\Stdlib\\' => array($vendorDir . '/zendframework/zend-stdlib/src'),
