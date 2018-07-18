@@ -11,10 +11,18 @@
               <h1 class="title is-2 is-spaced">
               
               </h1>
-              <h2 class="subtitle is-2">
-                  Congratulations! You're running the <strong>Bulma start</strong> project.
-              </h2>
+              <h1 class="subtitle is-1">
+              {% for entry in craft.entries.section('homepage') %}
+                  {{ entry.heroHeader }}
+              </h1>
+              
+              <p> {{ entry.heroSubheader }}</p>
+
+
+
               <a class="button">Learn More</a>
+
+              {% endfor %}
             </div>
           </div>
 

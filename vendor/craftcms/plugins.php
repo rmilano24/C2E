@@ -32,7 +32,7 @@ return array (
       '@craft/contactform' => $vendorDir . '/craftcms/contact-form/src',
     ),
     'name' => 'Contact Form',
-    'version' => '2.1.1',
+    'version' => '2.2.0',
     'description' => 'Add a simple contact form to your Craft CMS site',
     'developer' => 'Pixel & Tonic',
     'developerUrl' => 'https://pixelandtonic.com/',

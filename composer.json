@@ -19,10 +19,10 @@
     "rss": "https://craftcms.com/changelog.rss"
   },
   "require": {
-    "craftcms/cms": "^3.0.0",
+    "craftcms/cms": "3.0.16",
     "vlucas/phpdotenv": "^2.4.0",
     "craftcms/ckeditor": "1.0.0-beta.2",
-    "craftcms/contact-form": "2.1.1"
+    "craftcms/contact-form": "2.2.0"
   },
   "autoload": {
     "psr-4": {
