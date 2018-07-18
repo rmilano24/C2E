@@ -37,6 +37,10 @@ class ComposerStaticInitfa6cb7c5977a1d4074e912eaf092653d
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
         ),
+        'v' => 
+        array (
+            'verbb\\fieldmanager\\' => 19,
+        ),
         'm' => 
         array (
             'modules\\' => 8,
@@ -179,6 +183,10 @@ class ComposerStaticInitfa6cb7c5977a1d4074e912eaf092653d
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'verbb\\fieldmanager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/verbb/field-manager/src',
         ),
         'modules\\' => 
         array (
@@ -2653,6 +2661,14 @@ class ComposerStaticInitfa6cb7c5977a1d4074e912eaf092653d
         'enshrined\\svgSanitize\\data\\TagInterface' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/data/TagInterface.php',
         'mikehaertl\\shellcommand\\Command' => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src/Command.php',
         'modules\\Module' => __DIR__ . '/../..' . '/modules/Module.php',
+        'verbb\\fieldmanager\\FieldManager' => __DIR__ . '/..' . '/verbb/field-manager/src/FieldManager.php',
+        'verbb\\fieldmanager\\assetbundles\\FieldManagerAsset' => __DIR__ . '/..' . '/verbb/field-manager/src/assetbundles/FieldManagerAsset.php',
+        'verbb\\fieldmanager\\base\\PluginTrait' => __DIR__ . '/..' . '/verbb/field-manager/src/base/PluginTrait.php',
+        'verbb\\fieldmanager\\controllers\\BaseController' => __DIR__ . '/..' . '/verbb/field-manager/src/controllers/BaseController.php',
+        'verbb\\fieldmanager\\models\\Settings' => __DIR__ . '/..' . '/verbb/field-manager/src/models/Settings.php',
+        'verbb\\fieldmanager\\services\\Export' => __DIR__ . '/..' . '/verbb/field-manager/src/services/Export.php',
+        'verbb\\fieldmanager\\services\\Import' => __DIR__ . '/..' . '/verbb/field-manager/src/services/Import.php',
+        'verbb\\fieldmanager\\services\\Service' => __DIR__ . '/..' . '/verbb/field-manager/src/services/Service.php',
         'yii\\BaseYii' => __DIR__ . '/..' . '/yiisoft/yii2/BaseYii.php',
         'yii\\base\\Action' => __DIR__ . '/..' . '/yiisoft/yii2/base/Action.php',
         'yii\\base\\ActionEvent' => __DIR__ . '/..' . '/yiisoft/yii2/base/ActionEvent.php',
