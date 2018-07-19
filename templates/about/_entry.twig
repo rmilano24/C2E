@@ -93,9 +93,38 @@
           </div>
         </section>
 
+        <section class="more-clients" id="clientList">
+
+            <div class="container" v-show="isShowing">
+
+                <div class="columns">
+                    <div class="column">
+                       Name of client
+                    </div>
+                    <div class="column">
+                        Name of client
+                    </div>
+                    <div class="column">
+                       Name of client
+                    </div>
+                
+                </div>
+                
+            </div>
+
+            <div class="container text-is-centered">
+                <div class="coloumn">
+                    <button @click="isShowing = true">More Clients</button>
+                </div>
+            </div>
+
+        
+        </section>
+
 
          <section class="section">
           <div class="container">
+
 
           {% if entry.homeNumbers|length %}
 
@@ -166,6 +195,9 @@
 
        <section class="section ">
             <div class="container">
+
+                <h3 class="title is-3 has-text-centered">Our Client List</h3>
+
                 <div class="columns">
                   
             {% for block in entry.testimonials %}
