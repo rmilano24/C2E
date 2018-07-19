@@ -28,39 +28,17 @@
         <h2 class="title is-2">Curated PDF's</h2>
 
           <div class="columns">
+            {% for row in entry.curatedPdfs %}
+              
               <div class="column">
-                 <ul>
-                   <li><a href="http://">This is a PDF</a></li>
-                   <li><a href="http://">This is a PDF</a></li>
-                   <li><a href="http://">This is a PDF</a></li>
-                   <li><a href="http://">This is a PDF</a></li>
-                 </ul>
+
+                   <a href="{{ row.nameOfPdf }}">{{ row.nameOfPdf }}</a>                
+
               </div>
-              <div class="column">
-                  <ul>
-                    <li><a href="http://">This is a PDF</a></li>
-                    <li><a href="http://">This is a PDF</a></li>
-                    <li><a href="http://">This is a PDF</a></li>
-                    <li><a href="http://">This is a PDF</a></li>
-                  </ul>
-               </div>
-               <div class="column">
-                  <ul>
-                    <li><a href="http://">This is a PDF</a></li>
-                    <li><a href="http://">This is a PDF</a></li>
-                    <li><a href="http://">This is a PDF</a></li>
-                    <li><a href="http://">This is a PDF</a></li>
-                  </ul>
-               </div>
-               <div class="column">
-                  <ul>
-                    <li><a href="http://">This is a PDF</a></li>
-                    <li><a href="http://">This is a PDF</a></li>
-                    <li><a href="http://">This is a PDF</a></li>
-                    <li><a href="http://">This is a PDF</a></li>
-                  </ul>
-               </div>
-            </div>
+
+              {% endfor %}
+
+          </div>    
       </div>
     </section>
 
@@ -69,40 +47,19 @@
             
           <h2 class="title is-2">Forms</h2>
   
-            <div class="columns">
-                <div class="column">
-                   <ul>
-                     <li><a href="http://">This is a PDF</a></li>
-                     <li><a href="http://">This is a PDF</a></li>
-                     <li><a href="http://">This is a PDF</a></li>
-                     <li><a href="http://">This is a PDF</a></li>
-                   </ul>
-                </div>
-                <div class="column">
-                    <ul>
-                      <li><a href="http://">This is a PDF</a></li>
-                      <li><a href="http://">This is a PDF</a></li>
-                      <li><a href="http://">This is a PDF</a></li>
-                      <li><a href="http://">This is a PDF</a></li>
-                    </ul>
-                 </div>
-                 <div class="column">
-                    <ul>
-                      <li><a href="http://">This is a PDF</a></li>
-                      <li><a href="http://">This is a PDF</a></li>
-                      <li><a href="http://">This is a PDF</a></li>
-                      <li><a href="http://">This is a PDF</a></li>
-                    </ul>
-                 </div>
-                 <div class="column">
-                    <ul>
-                      <li><a href="http://">This is a PDF</a></li>
-                      <li><a href="http://">This is a PDF</a></li>
-                      <li><a href="http://">This is a PDF</a></li>
-                      <li><a href="http://">This is a PDF</a></li>
-                    </ul>
-                 </div>
+          <div class="columns">
+            {% for row in entry.forms %}
+              
+              <div class="column">
+
+                   <a href="{{ row.nameOfForm }}">{{ row.nameOfForm }}</a>                
+
               </div>
+
+              {% endfor %}
+
+            </div>  
+
         </div>
       </section>
 
@@ -157,7 +114,7 @@
         </section>
 {# {% else %} #}
 
-    <section>
+    {# <section>
       <div class="container">
               <div class="columns is-mobile is-centered">
                   <div class="column is-half is-narrow">
@@ -170,7 +127,7 @@
                   </div>
                 </div>
               </div>
-    </section>
+    </section> #}
 
     
 {# {% endif %}  #}
