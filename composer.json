@@ -23,7 +23,8 @@
     "vlucas/phpdotenv": "^2.4.0",
     "craftcms/ckeditor": "1.0.0-beta.2",
     "craftcms/contact-form": "2.2.0",
-    "verbb/field-manager": "2.0.2"
+    "verbb/field-manager": "2.0.2",
+    "verbb/super-table": "2.0.7"
   },
   "autoload": {
     "psr-4": {
