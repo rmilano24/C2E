@@ -33,7 +33,7 @@
                 <div class="column">
                     <h3 class="title is-3">{{ entry.aboutMelissaHeader }}</h3>
                    {{ entry.aboutMelissaIntro}}
-                   
+
                   </div>
                 
         </div>
@@ -94,165 +94,116 @@
         </section>
 
 
-        <section class="section">
-            <div class="container">
-                <div class="columns">
-                    <div class="column">
-                        <div><span class="number">16</span></div>
-                        <span class="number-name">NAME OF ACCOMPLISHMENT</span>
-                    </div>
-                    <div class="column">
-                        <div><span class="number">16</span></div>
-                        <span class="number-name">NAME OF ACCOMPLISHMENT</span>
-                    </div>
-                    <div class="column">
-                        <div><span class="number">16</span></div>
-                        <span class="number-name">NAME OF ACCOMPLISHMENT</span>
-                    </div>
-                    <div class="column">
-                        <div><span class="number">16</span></div>
-                        <span class="number-name">NAME OF ACCOMPLISHMENT</span>
-                    </div>
-                  </div>
-  
-                  <div class="columns">
-                      <div class="column">
-                          <div><span class="number">16</span></div>
-                          <span class="number-name">NAME OF ACCOMPLISHMENT</span>
-                      </div>
-                      <div class="column">
-                          <div><span class="number">16</span></div>
-                          <span class="number-name">NAME OF ACCOMPLISHMENT</span>
-                      </div>
-                      <div class="column">
-                          <div><span class="number">16</span></div>
-                          <span class="number-name">NAME OF ACCOMPLISHMENT</span>
-                      </div>
-                      <div class="column">
-                          <div><span class="number">16</span></div>
-                          <span class="number-name">NAME OF ACCOMPLISHMENT</span>
-                      </div>
-                    </div> 
-  
-            </div>
-          </section>
+         <section class="section">
+          <div class="container">
 
+          {% if entry.homeNumbers|length %}
 
+          {% if entry.homeNumbersDescription|length %}
 
-        <section class="section">
-            <div class="container">
-             
-              <div class="columns">
-
-              <div class="column">
-                
-                   
-                      <blockquote>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</blockquote>
-                      
-                      <div class="columns">
-
-                          <div class="column">
-                              <figure class="image is-128x128">
-                                  <img src="https://bulma.io/images/placeholders/256x256.png">
-                                </figure>
-                             
-                         </div>   
-                         <div class="column">
-                            <div><span class="name">Steve Jobs</span></div>
-                            <span class="company-name">Apple // CEO</span>
-                          </div>   
-                        </div>    
-
-                </div> 
-                
-                <div class="column">
-                
-                   
-                    <blockquote>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</blockquote>
-                    
-                    <div class="columns">
-
-                        <div class="column">
-                            <figure class="image is-128x128">
-                                <img src="https://bulma.io/images/placeholders/256x256.png">
-                              </figure>
-                           
-                       </div>   
-                       <div class="column">
-                          <div><span class="name">Steve Jobs</span></div>
-                          <span class="company-name">Apple // CEO</span>
-                        </div>   
-                      </div>    
-
-              </div> 
-
-            </div>
-
-            <div class="container">
-             
-                <div class="columns">
-  
-                <div class="column">
-                  
-                     
-                        <blockquote>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</blockquote>
-                        
-                        <div class="columns">
-  
-                            <div class="column">
-                                <figure class="image is-128x128">
-                                    <img src="https://bulma.io/images/placeholders/256x256.png">
-                                  </figure>
-                               
-                           </div>   
-                           <div class="column">
-                              <div><span class="name">Steve Jobs</span></div>
-                              <span class="company-name">Apple // CEO</span>
-                            </div>   
-                          </div>    
-  
-                  </div> 
-                  
+           <div class="columns">
                   <div class="column">
+                      <div><span class="number"> 
+                        {% for row in entry.homeNumbers %}
+                        {{ row.numberOne }} 
+                        {% endfor %}
+                      </span></div>
+                      <span class="number-name">
+                         {% for row in entry.homeNumbersDescription %}
+                        {{ row.numberOneDescription }} 
+                        {% endfor %}
+                      </span>
+                  </div>
+                  <div class="column">
+                      <div><span class="number"> 
+                       {% for row in entry.homeNumbers %}
+                        {{ row.numberTwo }} 
+                        {% endfor %}
+                       </span></div>
+                      <span class="number-name">
+                         {% for row in entry.homeNumbersDescription %}
+                        {{ row.numberTwoDescription }} 
+                        {% endfor %}
+                      </span>
+                  </div>
+                  <div class="column">
+                     <div><span class="number"> 
+                       {% for row in entry.homeNumbers %}
+                        {{ row.numberThree }} 
+                        {% endfor %}
+                       </span></div>
+                      <span class="number-name">
+                         {% for row in entry.homeNumbersDescription %}
+                        {{ row.numberThreeDescription }} 
+                        {% endfor %}
+                      </span>
+                  </div>
+                  <div class="column">
+                      <div><span class="number"> 
+                       {% for row in entry.homeNumbers %}
+                        {{ row.numberFour }} 
+                        {% endfor %}
+                       </span></div>
+                      <span class="number-name">
+                         {% for row in entry.homeNumbersDescription %}
+                        {{ row.numberFourDescription }} 
+                        {% endfor %}
+                      </span>
+                  </div>
+            </div>
+               
+
+                
+            {% endif %}       
+                
+            {% endif %}
+          
+             
+          </div>
+        </section>
+
+
+
+       <section class="section ">
+            <div class="container">
+                <div class="columns">
                   
-                     
-                      <blockquote>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</blockquote>
-                      
-                      <div class="columns">
-  
-                          <div class="column">
-                              <figure class="image is-128x128">
-                                  <img src="https://bulma.io/images/placeholders/256x256.png">
+            {% for block in entry.testimonials %}
+            <div class="column is-half">
+                
+                {% if block.type == "testimonial" %}
+
+                 {% set image = block.headshot.first() %}
+                         
+                      <p>{{ block.quote }}</p>
+
+                       <div class="columns">
+
+                            <div class="is-four-fifths">
+                                <figure class="image is-96x96" style="width: 100px; margin: 0 auto 50px auto;">
+                                    <img src="{{image.url}}">
                                 </figure>
-                             
-                         </div>   
-                         <div class="column">
-                            <div><span class="name">Steve Jobs</span></div>
-                            <span class="company-name">Apple // CEO</span>
-                          </div>   
-                        </div>    
-  
-                </div> 
-  
-              </div>
+                            </div>
 
+                            <div>
+                                <div><span class="name">{{ block.personsName }}</span></div>
+                                <span class="company-name">Apple // {{ block.personsCompany }}</span>
+                            </div>
+                       
+                       </div> 
+     
 
+                  {% endif %} 
+                </div>           
+            {% endfor %}       
+
+                     
+                </div>
+                    
+
+            </div>
           </section>
 
-         
-
-            <section class="section has-text-centered" >
-                <div class="container">
-                    
-                  
-                    <div class="column">
-                        Ready to Level Up?
-                        <a class="button is-primary">Learn More</a>
-                      </div>
-    
-    
-                </div>
-              </section>
-
+        
             
 {% endblock %}
