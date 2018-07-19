@@ -9,8 +9,10 @@
           <div class="columns">
             <div class="column is-8-desktop is-offset-2-desktop">
               <h1 class="title is-2 is-spaced">
-                About
+                {{ entry.heroHeader }}
               </h1>
+
+              <p>{{ entry.heroSubheader }}</p>
             
             </div>
           </div>
@@ -29,12 +31,9 @@
                       </figure>
                 </div>
                 <div class="column">
-                    <h3 class="title is-3">About Melissa</h3>
-                    <p class="is-spaced"> I connect with people quickly and aim to become their trusted advisor and objective sounding board in both personal lives and professional lives. I believe if you’re mind is clouded with personal issues, it’s difficult to show up well at work, so I aim to coach the whole person. No topic is off limits.</p>
-                    <p> I connect with people quickly and aim to become their trusted advisor and objective sounding board in both personal lives and professional lives. I believe if you’re mind is clouded with personal issues, it’s difficult to show up well at work, so I aim to coach the whole person. No topic is off limits.</p>
-
-                    <a class="button is-primary">Learn More</a>
-
+                    <h3 class="title is-3">{{ entry.aboutMelissaHeader }}</h3>
+                   {{ entry.aboutMelissaIntro}}
+                   
                   </div>
                 
         </div>
