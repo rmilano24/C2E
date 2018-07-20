@@ -92,11 +92,26 @@
 </section>
 
 
+ {% for block in entry.servicesContents %}
+
+{# Two Column #}
+    
+
 <section>
+
+{% switch block.type %}
+
+{% case "caseStudyTwoColumn" %}
+{# {% set image = block.image.one() %} #}
+
     <div class="columns is-mobile is-centered">
         <div class="column is-half is-narrow">
             <figure class="image is-5by3">
-                <img src="https://bulma.io/images/placeholders/256x256.png">
+                 {% for asset in block.image %}
+
+                    <img src="{{asset.url}}">
+
+                {% endfor %}
               </figure>
         </div>
       </div>
@@ -106,15 +121,17 @@
               <div class="columns">
                 <div class="column is-two-thirds">
                   
-                  <h4 class="is-size-4 title">The Challege</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <h4 class="is-size-4 title">{{ block.caseStudyHeader }}</h4>
+                  {{ block.caseStudyDescription }}
                 </div>
                 <div class="column">
-                    <h4 class="is-size-4 title">The Challege</h4>
+                    <h4 class="is-size-4 title">{{ block.servicesProvidedHeader}}</h4>
                     <ul>
-                      <li><a href="http://">Name of Service</a></li>
-                      <li><a href="http://">Name of Service</a></li>
-                      <li><a href="http://">Name of Service</a></li>
+                      {% for row in block.listOfServicesProvided %}
+                    
+                        <li>{{ row.nameOfServiceProvided }}</li>
+
+                    {% endfor %}
                     </ul>
                 </div>
               </div>
@@ -124,6 +141,13 @@
         </div>
 
 </section>
+
+{# End Two Column #}
+
+{% endswitch %}
+
+{# One Column #}
+
 
 <section>
     <div class="columns is-mobile is-centered">
@@ -153,33 +177,12 @@
 
 </section>
 
-<section>
-    <div class="columns is-mobile is-centered">
-        <div class="column is-half is-narrow">
-            <figure class="image is-5by3">
-                <img src="https://bulma.io/images/placeholders/256x256.png">
-              </figure>
-        </div>
-      </div>
+{# Two Column #}
 
-      <div class="columns is-mobile is-centered">
-          <div class="column is-half is-narrow">
-              <div class="columns">
-                <div class="column">
-                  
-                  <h4 class="is-size-4 title">Results!</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
- 
-                  </div>
-               
-              </div>
-  
-          
-          </div>
-        </div>
+{% endfor %}
 
-</section>
+
+
 
 <section class="section has-text-centered">
     <div class="container">
