@@ -95,14 +95,11 @@
  {% for block in entry.servicesContents %}
 
 {# Two Column #}
-    
-
-<section>
 
 {% switch block.type %}
+{% case "caseStudyTwoColumn" %}    
 
-{% case "caseStudyTwoColumn" %}
-{# {% set image = block.image.one() %} #}
+<section>
 
     <div class="columns is-mobile is-centered">
         <div class="column is-half is-narrow">
@@ -144,9 +141,11 @@
 
 {# End Two Column #}
 
-{% endswitch %}
+
 
 {# One Column #}
+
+{% case "caseStudyOneColumn" %}  
 
 
 <section>
@@ -163,9 +162,9 @@
               <div class="columns">
                 <div class="column">
                   
-                  <h4 class="is-size-4 title">Our Approach</h4>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <h4 class="is-size-4 title">{{ block.caseStudyHeader }}</h4>
+                 
+                 {{ block.caseStudyDescription }}
  
                   </div>
                
@@ -176,6 +175,8 @@
         </div>
 
 </section>
+
+{% endswitch %}
 
 {# Two Column #}
 
