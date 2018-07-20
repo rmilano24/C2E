@@ -114,21 +114,20 @@
             <div class="container" v-show="isShowing">
 
                 <div class="columns">
-                    <div class="column">
-                       Name of client
+                 {% for row in entry.listOfMoreClients %}
+                    
+                    <div class="column is-one-third">
+                     
+                        {{ row.clientName }}
+                     
                     </div>
-                    <div class="column">
-                        Name of client
-                    </div>
-                    <div class="column">
-                       Name of client
-                    </div>
-                
-                </div>
-                
-            </div>
 
-            <div class="container text-is-centered">
+                 {% endfor %}
+
+                </div>
+            </div>  
+
+            <div class="container has-text-centered">
                 <div class="coloumn">
                     <button @click="isShowing = true">More Clients</button>
                 </div>
