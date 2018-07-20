@@ -185,21 +185,34 @@
 
 
 
-<section class="section has-text-centered">
-    <div class="container">
-        
-      
-        <div class="column is-horizontal-center">
-            <figure class="image is-96x96" style="width: 100px; margin: 0 auto 50px auto;">
-                <img src="https://bulma.io/images/placeholders/48x48.png">
-              </figure>
-              <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</p>
-              <div><span class="name">Steve Jobs</span></div>
-              <span class="company-name">Apple // CEO</span>
-          </div>
+ <section class="section has-text-centered">
+            <div class="container">
 
+            {% for block in entry.testimonials.limit(1) %}
+            
+                
+                {% if block.type == "testimonial" %}
 
-    </div>
-  </section>
+                 {% set image = block.headshot.first() %}
+              
+                <div class="column is-horizontal-center">
+                    <figure class="image is-96x96" style="width: 100px; margin: 0 auto 50px auto;">
+                        <img src="{{image.url}}">
+                      </figure>
+                      <p>
+                        
+                            {{ block.quote }}
+                        
+                      </p>
+                      <div><span class="name">{{ block.personsName }}</span></div>
+                      <span class="company-name">Apple // {{ block.personsCompany }}</span>
+                  </div>
+
+                  {% endif %} 
+            
+            {% endfor %}       
+
+            </div>
+          </section>
 
   {% endblock %}
