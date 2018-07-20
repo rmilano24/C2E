@@ -67,14 +67,17 @@
         <div class="column is-half is-narrow">
             <h3 class="is-h3 title">{{ entry.servicesIncludedHeader }}</h3>
             
-            <h4 class="title is-size-4">Name of Service</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          
 
-            <h4 class="title is-size-4">Name of Service</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                {% for row in entry.servicesIncluded %}
+                    
+                <h4 class="title is-4 is-spaced">{{ row.nameOfService }}</h4>
+                <p>{{ row.serviceDescription }}</p>
 
-            <h4 class="title is-size-4">Name of Service</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                {% endfor %}
+                
+            
+           
         </div>
       </div>
 </section>
