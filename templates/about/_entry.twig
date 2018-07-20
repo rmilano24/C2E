@@ -44,51 +44,67 @@
 
               <h3 class="title is-3 has-text-centered">Our Client List</h3>
 
+               {% for block in entry.clientLogos %}
+            
+                {% switch block.type %}
+                {% case "rowOfLogos" %}    
+
+               
+
               <div class="columns">
                   <div class="column">
                       <figure class="image is-128x128">
-                          <img src="https://bulma.io/images/placeholders/256x256.png">
+                         {% for asset in block.logoOne %}
+
+                            <img src="{{ asset.url }}">
+
+                        {% endfor %}
                         </figure>
                   </div>
                   <div class="column">
                       <figure class="image is-128x128">
-                          <img src="https://bulma.io/images/placeholders/256x256.png">
+                          {% for asset in block.logoTwo %}
+
+                            <img src="{{ asset.url }}">
+
+                        {% endfor %}
                         </figure>
                   </div>
                   <div class="column">
                       <figure class="image is-128x128">
-                          <img src="https://bulma.io/images/placeholders/256x256.png">
+                          {% for asset in block.logoThree %}
+
+                            <img src="{{ asset.url }}">
+
+                        {% endfor %}
                         </figure>
                   </div>
                   <div class="column">
                       <figure class="image is-128x128">
-                          <img src="https://bulma.io/images/placeholders/256x256.png">
+                          {% for asset in block.logoFour %}
+
+                            <img src="{{ asset.url }}">
+
+                        {% endfor %}
                         </figure>
                   </div>
+
+                   <div class="column">
+                      <figure class="image is-128x128">
+                          {% for asset in block.logoFive %}
+
+                            <img src="{{ asset.url }}">
+
+                        {% endfor %}
+                        </figure>
+                  </div> 
+
                 </div>
 
-                <div class="columns">
-                    <div class="column">
-                        <figure class="image is-128x128">
-                            <img src="https://bulma.io/images/placeholders/256x256.png">
-                          </figure>
-                    </div>
-                    <div class="column">
-                        <figure class="image is-128x128">
-                            <img src="https://bulma.io/images/placeholders/256x256.png">
-                          </figure>
-                    </div>
-                    <div class="column">
-                        <figure class="image is-128x128">
-                            <img src="https://bulma.io/images/placeholders/256x256.png">
-                          </figure>
-                    </div>
-                    <div class="column">
-                        <figure class="image is-128x128">
-                            <img src="https://bulma.io/images/placeholders/256x256.png">
-                          </figure>
-                    </div>
-                  </div> 
+                {% endswitch %}
+
+                {% endfor %}
+              
 
           </div>
         </section>
