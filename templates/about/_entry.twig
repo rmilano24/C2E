@@ -112,28 +112,25 @@
         <section class="more-clients" id="clientList">
 
             <div class="container" v-show="isShowing">
-
-                <div class="columns">
-                 {% for row in entry.listOfMoreClients%}
+                {% if entry.listOfMoreClients|length %}
                     
-                    <div class="column is-one-third">
-                     
-                        {{ row.clientName }}
-                     
+                    {% for row in entry.listOfMoreClients %}
+                    <div class="columns" >
+                        <div class="column is-one-third">{{ row.clientNameFirst }}</div>
+                        <div class="column">{{ row.clientNameSecond}}</div>
+                        <div class="column">{{ row.clientNameThird }}</div>
                     </div>
-
-                 {% endfor %}
-
-                </div>
-            </div>  
+                    {% endfor %}
+                        
+                {% endif %}
+            </div>    
 
             <div class="container has-text-centered">
                 <div class="coloumn">
                     <button @click="isShowing = true">More Clients</button>
                 </div>
-            </div>
-
-        
+            </div> 
+               
         </section>
 
 
