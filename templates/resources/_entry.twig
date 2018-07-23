@@ -25,19 +25,22 @@
     <section class="section">
       <div class="container">
           
-        <h2 class="title is-2">Curated PDF's</h2>
+        <h2 class="title is-2">Articles</h2>
 
           <div class="columns">
-            {% for row in entry.curatedPdfs %}
+           
+
+            {% for entry in craft.entries.section('articles').all() %}
               
-              <div class="column">
+              <div class="column is-one-third">
               
 
-                   <a href="{{ row.uploadPdf }}">{{ row.nameOfPdf }}</a>                
+                   <a href="{{ entry.url }}">{{ entry.title }}</a>                
 
               </div>
 
-              {% endfor %}
+              {% endfor %}    
+
 
           </div>    
       </div>
@@ -49,15 +52,27 @@
           <h2 class="title is-2">Forms</h2>
   
           <div class="columns">
-            {% for row in entry.forms %}
+           
               
               <div class="column">
 
-                   <a href="{{ row.nameOfForm }}">{{ row.nameOfForm }}</a>                
+                   <a href="">Name of form</a>                
 
               </div>
 
-              {% endfor %}
+               <div class="column">
+
+                   <a href="">Name of form</a>                
+
+              </div>
+
+               <div class="column">
+
+                   <a href="">Name of form</a>                
+
+              </div>
+
+             
 
             </div>  
 
