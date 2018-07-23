@@ -29,18 +29,15 @@
 
           <div class="columns">
            
-
             {% for entry in craft.entries.section('articles').all() %}
               
               <div class="column is-one-third">
-              
 
                    <a href="{{ entry.url }}">{{ entry.title }}</a>                
 
               </div>
 
               {% endfor %}    
-
 
           </div>    
       </div>
