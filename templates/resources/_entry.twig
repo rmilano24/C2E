@@ -50,23 +50,28 @@
         <div class="container">
             
           <h2 class="title is-2">Forms</h2>
-  
-          <div class="columns">
 
-          
-           {% for block in entry.forms %}
+        
+
+         {% for entry in entry.forms %}
+
+          {% if loop.index0 is divisible by(3) %}
+          <div class="columns">
+          {% endif %}
               
               <div class="column is-one-third">
-                    {% for asset in block.uploadForm %}
-                   <a href="{{ asset.getUrl }}">{{ block.formName }}</a>                
+                  {% for asset in entry.uploadForm %}
+                   <a href="{{ asset.getUrl }}">{{ entry.formName }}</a>                
                   {% endfor %}   
-              </div>
+              </div>  
 
-             {% endfor %}   
-             
-
+            {% if loop.index is divisible by(3) or loop.last %}
             </div>  
+            {% endif %}
 
+            {% endfor %} 
+
+  
         </div>
       </section>
 
