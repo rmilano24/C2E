@@ -43,32 +43,26 @@
       </div>
     </section>
 
+
+ 
+
     <section class="section">
         <div class="container">
             
           <h2 class="title is-2">Forms</h2>
   
           <div class="columns">
-           
+
+          
+           {% for block in entry.forms %}
               
-              <div class="column">
-
-                   <a href="">Name of form</a>                
-
+              <div class="column is-one-third">
+                    {% for asset in block.uploadForm %}
+                   <a href="{{ asset.getUrl }}">{{ block.formName }}</a>                
+                  {% endfor %}   
               </div>
 
-               <div class="column">
-
-                   <a href="">Name of form</a>                
-
-              </div>
-
-               <div class="column">
-
-                   <a href="">Name of form</a>                
-
-              </div>
-
+             {% endfor %}   
              
 
             </div>  
@@ -76,7 +70,9 @@
         </div>
       </section>
 
-      <section class="section">
+  
+
+      {# <section class="section">
           <div class="container">
 
               <h2 class="title is-2">Vidoes</h2>
@@ -124,7 +120,7 @@
                   </div>
                 </div>
           </div>
-        </section>
+        </section> #}
 {# {% else %} #}
 
     {# <section>
